@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
             trailing: Icon(Icons.arrow_right, color: Colors.lightGreen),
             onTap: () {
               Navigator.pop(context); // Ferme le tiroir
-              Navigator.pushNamed(context, '/Home'); // Navigue vers la page d'accueil
+              Navigator.pushNamed(context, '/home'); // Navigue vers la page d'accueil
             },
           ),
           ListTile(

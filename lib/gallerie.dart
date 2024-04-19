@@ -1,50 +1,79 @@
 import 'package:flutter/material.dart';
-import 'package:repository/Page%20Gallerie-Details.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
+import 'Page Gallerie-Details.dart';
 import 'mydawer/MyDrawer.dart';
 
 class GalleriePage extends StatelessWidget {
-  final TextEditingController txt_image = TextEditingController();
+  final TextEditingController txt_ville = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gallerie",style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),),
-        backgroundColor: Colors.green, // Couleur de l'AppBar
+        title: Text(
+          "Gallerie",
+          style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+        ),
+        backgroundColor: Colors.green,
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(), // Utilisation du menu latéral MyDrawer
       body: Container(
-        decoration: BoxDecoration( // Décoration pour l'arrière-plan
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('image/background.jpg'), // Image d'arrière-plan
-            fit: BoxFit.cover, // Ajuster l'image pour remplir tout l'espace disponible
-            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop), // Rendre l'image transparente
+            image: AssetImage('image/background.jpg'),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.2), BlendMode.dstATop),
           ),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Champ de texte avec icône de ville
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: TextField(
-                  controller: txt_image,
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.photo),
-                    hintText: "Entrez le nom de l'image",
-                    border: OutlineInputBorder(),
-                  ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 20),
+                    Icon(
+                      Icons.image_search,
+                      size: 80,
+                      color: Colors.grey,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Rechercher Une Image",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(height: 30),
-              // Bouton de recherche
+              SizedBox(height: 20),
+              TextFormField(
+                controller: txt_ville,
+                style: TextStyle(color: Colors.black),
+                decoration: InputDecoration(
+                  labelText: "Entrez le nom de la ville",
+                  prefixIcon: Icon(Icons.photo, color: Colors.grey),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  labelStyle: TextStyle(color: Colors.green),
+                ),
+              ),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   _onGetImageDetails(context);
                 },
-                child: Text("Rechercher",style: TextStyle(fontWeight:FontWeight.w800,color: Colors.green,),),
+                child: Text(
+                  "Rechercher",
+                  style: TextStyle(fontWeight: FontWeight.w800, color: Colors.green),
+                ),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 100),
                   shape: RoundedRectangleBorder(
@@ -60,7 +89,7 @@ class GalleriePage extends StatelessWidget {
   }
 
   void _onGetImageDetails(BuildContext context) {
-    String image = txt_image.text;
+    String image = txt_ville.text;
     Navigator.push(
       context,
       MaterialPageRoute(

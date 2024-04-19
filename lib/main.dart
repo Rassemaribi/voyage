@@ -7,8 +7,7 @@ import 'package:repository/inscritionPage.dart';
 import 'package:repository/meteo.dart';
 import 'package:repository/parameter.page.dart';
 import 'package:repository/pays.page.dart';
-import 'package:shared_preferences/shared_preferences.dart'; // Ajout de l'import pour SharedPreferences
-
+import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   runApp(MyApp());
 }
@@ -21,11 +20,11 @@ class MyApp extends StatelessWidget {
     '/gallerie': (context) => GalleriePage(),
     '/parameter': (context) => ParameterPage(),
     '/meteo': (context) => MeteoPage(),
-    '/pays': (context) => paysPage(),
+    '/pays': (context) => PaysPage(),
     '/home': (context) => Home(),
   };
 
-  // Ceci est la racine de votre application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

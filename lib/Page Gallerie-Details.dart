@@ -14,7 +14,7 @@ class GallerieDetailsPage extends StatefulWidget {
 class _GallerieDetailsPageState extends State<GallerieDetailsPage> {
   int currentPage = 1;
   int size = 10;
-  int totalPages = 0; // Initialise totalPages à 0
+  int totalPages = 0; 
   late ScrollController _scrollController;
   List<dynamic> hits = [];
   var galleryData;
