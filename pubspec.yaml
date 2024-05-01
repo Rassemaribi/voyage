@@ -9,6 +9,8 @@ environment:
 
 dependencies:
   shared_preferences: ^2.2.2
+  sqflite:
+  snippet_coder_utils:
   http: ^1.2.0
   flutter:
     sdk: flutter

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:repository/pays-details.page.dart';
 
+import 'mydawer/MyDrawer.dart';
+
 class PaysPage extends StatelessWidget {
   final TextEditingController txt_nomPays = TextEditingController();
 
@@ -14,6 +16,7 @@ class PaysPage extends StatelessWidget {
         ),
         backgroundColor: Colors.green,
       ),
+      drawer: MyDrawer(),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

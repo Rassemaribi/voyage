@@ -16,7 +16,7 @@ class GalleriePage extends StatelessWidget {
         ),
         backgroundColor: Colors.green,
       ),
-      drawer: MyDrawer(), // Utilisation du menu latéral MyDrawer
+      drawer: MyDrawer(),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
