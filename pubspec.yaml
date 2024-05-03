@@ -9,6 +9,9 @@ environment:
 
 dependencies:
   shared_preferences: ^2.2.2
+  firebase_core:
+  firebase_auth:
+  firebase_database:
   sqflite:
   snippet_coder_utils:
   http: ^1.2.0

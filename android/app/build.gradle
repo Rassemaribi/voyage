@@ -1,5 +1,8 @@
 plugins {
     id "com.android.application"
+    // Démarrer : Configuration FlutterFire
+    id 'com.google.gms.google-services'
+    // Fin : Configuration FlutterFire
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -41,10 +44,10 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // TODO: Spécifiez votre propre identifiant d'application unique (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.repository"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        // Vous pouvez mettre à jour les valeurs suivantes selon les besoins de votre application.
+        // Pour plus d'informations, consultez : https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
@@ -53,8 +56,8 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // TODO: Ajoutez votre propre configuration de signature pour la version de production.
+            // Nous utilisons la signature avec les clés de débogage pour le moment, donc `flutter run --release` fonctionne.
             signingConfig signingConfigs.debug
         }
     }

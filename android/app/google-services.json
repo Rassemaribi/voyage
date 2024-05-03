@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "720003732552",
+    "project_id": "voyageflutter-3e173",
+    "storage_bucket": "voyageflutter-3e173.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720003732552:android:86c1cd8072c362f98b747d",
+        "android_client_info": {
+          "package_name": "com.example.repository"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQTlH951pIV4ipsYg3OsggXpQXqCQoFLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
